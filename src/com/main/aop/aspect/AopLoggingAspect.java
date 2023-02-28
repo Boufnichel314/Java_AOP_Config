@@ -8,8 +8,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class AopLoggingAspect {
 
-	@Before("execution(public void addAccount())")
+	@Before("execution(* com.main.aop.calculator.*.*(..))")
 	public void befforeAddAccount() {
-		System.out.println("--> in the AopLoggingAspect class : do this before addAccount methode !");
+		System.out.println("--> in the AopLoggingAspect class : do this before all add methodes!");
 	}
 }
